@@ -260,6 +260,34 @@ textarea:focus {
     }
 }
 
+
+/* Gallery Tabs */
+.tab-btn {
+    color: #6b7280;
+    background: transparent;
+}
+
+.active-tab {
+    background: #1a4731;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(26, 71, 49, 0.25);
+}
+
+/* Lightbox */
+#lightbox {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 /* WhatsApp btn */
 .wa-btn {
     background: linear-gradient(135deg, #25d366, #128c4a);
@@ -280,4 +308,43 @@ textarea:focus {
 #card-processed .product-img {
     object-position: center;
     background: #fafafa;
+}
+
+/* Checkout Panel */
+#checkout-panel {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(.4, 0, .2, 1);
+}
+
+#checkout-panel.open {
+    transform: translateX(0);
+}
+
+/* Payment button active state */
+.active-payment {
+    border-color: #22c55e !important;
+    background-color: #f0fdf4 !important;
+}
+
+/* Floating WhatsApp Button Pulse */
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 0 12px rgba(34, 197, 94, 0);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2s infinite;
 }

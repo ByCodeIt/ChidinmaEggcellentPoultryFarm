@@ -15,8 +15,8 @@
     <meta name="generator" content="Chidinma Eggcellent - Poultry Farm LTD" />
 
     <!-- ==== Favicon ==== -->
-    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
-    <link rel="apple-touch-icon" href="./assets/images/favicon.png" />
+    <link rel="icon" type="image/png" href="./assets/images/logo1.png" />
+    <link rel="apple-touch-icon" href="./assets/images/logo1.png" />
     
     <title>Chidinma Eggcellent — Poultry Farm</title>
 
@@ -40,7 +40,7 @@
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <!-- Logo -->
             <a href="#home" class="flex items-center gap-2">
-                <img src="./assets/images/logo.png" alt="Chidinma Eggcellent Poultry Farm Logo"
+                <img src="./assets/images/logo1.png" alt="Chidinma Eggcellent Poultry Farm Logo"
                     class="h-10 w-auto object-contain" />
                 <span class="font-display text-xl text-white leading-none">
                     Chidinma<br>
@@ -53,6 +53,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#reviews" class="nav-link">Reviews</a></li>
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -88,6 +89,8 @@
                 onclick="document.getElementById('mob-menu').classList.add('hidden')">About</a>
             <a href="#products" class="nav-link block px-2 py-1"
                 onclick="document.getElementById('mob-menu').classList.add('hidden')">Products</a>
+            <a href="#gallery" class="nav-link block px-2 py-1"
+                onclick="document.getElementById('mob-menu').classList.add('hidden')">Gallery</a>
             <a href="#reviews" class="nav-link block px-2 py-1"
                 onclick="document.getElementById('mob-menu').classList.add('hidden')">Reviews</a>
             <a href="#faq" class="nav-link block px-2 py-1"
@@ -253,126 +256,430 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="products-grid"></div>
         </div>
     </section>
+
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
     
+            <!-- Header -->
+            <div class="text-center mb-14 reveal">
+                <span class="text-amber-600 font-semibold text-sm tracking-widest uppercase">Our Farm</span>
+                <h2 class="font-display text-4xl md:text-5xl text-green-900 mt-2">Photo & Video Gallery</h2>
+                <p class="text-gray-400 mt-3 text-sm max-w-md mx-auto">A glimpse into life at Chidinma Eggcellent Poultry
+                    Farm — healthy birds, happy hens and fresh eggs daily.</p>
+            </div>
+    
+            <!-- Tab Switcher -->
+            <div class="flex items-center justify-center mb-10">
+                <div class="bg-gray-100 p-1 rounded-full flex gap-1">
+                    <button id="tab-photos" onclick="switchTab('photos')"
+                        class="tab-btn active-tab px-8 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Photos
+                    </button>
+                    <button id="tab-videos" onclick="switchTab('videos')"
+                        class="tab-btn px-8 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.723v6.554a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+                        </svg>
+                        Videos
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Photos Grid -->
+            <div id="gallery-photos" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo1.jpeg', 'Healthy hens at feeding time')">
+                    <img src="./assets/gallery/photo1.jpeg" alt="Healthy hens at feeding time"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo2.jpg', 'Layer hens in cages')">
+                    <img src="./assets/gallery/photo2.jpg" alt="Layer hens in cages"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo3.jpg', 'Poultry manure bags')">
+                    <img src="./assets/gallery/photo3.jpg" alt="Poultry manure bags"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo4.jpg', 'Rich organic manure')">
+                    <img src="./assets/gallery/photo4.jpg" alt="Rich organic manure"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo5.jpg', 'Fresh manure ready for sale')">
+                    <img src="./assets/gallery/photo5.jpg" alt="Fresh manure ready for sale"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo6.jpg', 'Bagged manure closeup')">
+                    <img src="./assets/gallery/photo6.jpg" alt="Bagged manure closeup"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo7.jpg', 'NAFDAC certified poultry feed')">
+                    <img src="./assets/gallery/photo7.jpg" alt="NAFDAC certified poultry feed"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+                <div class="gallery-item reveal cursor-pointer group relative rounded-2xl overflow-hidden aspect-square"
+                    onclick="openLightbox('./assets/gallery/photo8.jpg', 'Multi-tier layer cage system')">
+                    <img src="./assets/gallery/photo8.jpg" alt="Multi-tier layer cage system"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                </div>
+            
+            </div>
+    
+            <!-- Videos Grid -->
+            <div id="gallery-videos" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+                <div class="reveal rounded-2xl overflow-hidden bg-black shadow-lg">
+                    <video controls class="w-full aspect-video object-cover" poster="./assets/gallery/thumb1.jpg">
+                        <source src="./assets/gallery/video1.mp4" type="video/mp4" />
+                    </video>
+                    <div class="p-4 bg-green-900">
+                        <h4 class="text-white font-semibold text-sm">Farm Tour — Our Poultry House</h4>
+                        <p class="text-green-300 text-xs mt-1">A walkthrough of our poultry facility.</p>
+                    </div>
+                </div>
+            
+                <div class="reveal rounded-2xl overflow-hidden bg-black shadow-lg">
+                    <video controls class="w-full aspect-video object-cover" poster="./assets/gallery/thumb1.jpg">
+                        <source src="./assets/gallery/video2.mp4" type="video/mp4" />
+                    </video>
+                    <div class="p-4 bg-green-900">
+                        <h4 class="text-white font-semibold text-sm">Feeding Time — Healthy Hens</h4>
+                        <p class="text-green-300 text-xs mt-1">Our hens enjoying their daily feed.</p>
+                    </div>
+                </div>
+            
+                <div class="reveal rounded-2xl overflow-hidden bg-black shadow-lg">
+                    <video controls class="w-full aspect-video object-cover" poster="./assets/gallery/thumb1.jpg">
+                        <source src="./assets/gallery/video3.mp4" type="video/mp4" />
+                    </video>
+                    <div class="p-4 bg-green-900">
+                        <h4 class="text-white font-semibold text-sm">Egg Collection Process</h4>
+                        <p class="text-green-300 text-xs mt-1">Fresh eggs collected and sorted daily.</p>
+                    </div>
+                </div>
+            
+                <div class="reveal rounded-2xl overflow-hidden bg-black shadow-lg">
+                    <video controls class="w-full aspect-video object-cover" poster="./assets/gallery/thumb1.jpg">
+                        <source src="./assets/gallery/video4.mp4" type="video/mp4" />
+                    </video>
+                    <div class="p-4 bg-green-900">
+                        <h4 class="text-white font-semibold text-sm">Layer Cage System</h4>
+                        <p class="text-green-300 text-xs mt-1">Our modern multi-tier layer cages.</p>
+                    </div>
+                </div>
+            
+                <div class="reveal rounded-2xl overflow-hidden bg-black shadow-lg">
+                    <video controls class="w-full aspect-video object-cover" poster="./assets/gallery/thumb1.jpg">
+                        <source src="./assets/gallery/video7.mp4" type="video/mp4" />
+                    </video>
+                    <div class="p-4 bg-green-900">
+                        <h4 class="text-white font-semibold text-sm">Farm Operations</h4>
+                        <p class="text-green-300 text-xs mt-1">Day to day activities on our farm.</p>
+                    </div>
+                </div>
+            
+                <div class="reveal rounded-2xl overflow-hidden bg-black shadow-lg">
+                    <video controls class="w-full aspect-video object-cover" poster="./assets/gallery/thumb1.jpg">
+                        <source src="./assets/gallery/video12.mp4" type="video/mp4" />
+                    </video>
+                    <div class="p-4 bg-green-900">
+                        <h4 class="text-white font-semibold text-sm">Water & Feed System</h4>
+                        <p class="text-green-300 text-xs mt-1">Automated water and feeding lines in action.</p>
+                    </div>
+                </div>
+            
+            
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- ===== LIGHTBOX ===== -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center px-4"
+        onclick="closeLightbox()">
+        <button onclick="closeLightbox()"
+            class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <!-- Prev -->
+        <button id="lb-prev" onclick="event.stopPropagation(); lightboxNav(-1)"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <!-- Image -->
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] rounded-xl object-contain shadow-2xl"
+            onclick="event.stopPropagation()" />
+        <!-- Next -->
+        <button id="lb-next" onclick="event.stopPropagation(); lightboxNav(1)"
+            class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+        <!-- Caption -->
+        <div id="lightbox-caption"
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/50 text-white text-sm px-5 py-2 rounded-full backdrop-blur-sm">
+        </div>
+    </div>
+    
+
     <!-- ===== TESTIMONIALS ===== -->
     <section id="reviews" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="text-center mb-14 reveal">
                 <span class="text-amber-600 font-semibold text-sm tracking-widest uppercase">Happy Customers</span>
-                <h2 class="font-display text-4xl md:text-5xl text-green-900 mt-2">What They're Saying</h2>
+                <h2 class="font-display text-4xl md:text-5xl text-green-900 mt-2">What Our Customers Say</h2>
+                <p class="text-gray-400 mt-3 text-sm">Trusted by hundreds of families and businesses across Lagos.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-7">
-                <!-- T1 -->
-                <div class="testi-card p-7 rounded-2xl shadow-sm reveal">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+                <!-- Card 1 -->
+                <div
+                    class="reveal relative bg-green-50 border border-green-100 rounded-2xl p-6 flex flex-col justify-between">
+                    <!-- Quote Mark -->
+                    <span
+                        class="absolute top-4 right-5 text-5xl font-display text-green-200 leading-none select-none">"</span>
+                    <!-- Stars -->
                     <div class="flex gap-0.5 mb-4">
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-5 italic">"Chidinma Eggcellent - Poultry Farm has been supplying our restaurant for
-                        two years. The broilers are always fresh, well-dressed, and delivered on time. Best quality in Lagos
-                        hands down."</p>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center font-display text-green-800 font-bold">
-                            A</div>
-                        <div>
-                            <div class="font-semibold text-green-900 text-sm">Adaeze Okonkwo</div>
-                            <div class="text-gray-400 text-xs">Restaurant Owner, Victoria Island</div>
-                        </div>
+                    <!-- Quote -->
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-5">
+                        "Chidinma Eggcellent delivers the freshest broiler chickens I've ever bought. My family can taste
+                        the difference! Fast delivery too."
+                    </p>
+                    <!-- Customer -->
+                    <div class="text-center border-t border-green-100 pt-4">
+                        <div class="font-bold text-green-900 text-sm">Mrs. Adebayo</div>
+                        <div class="text-gray-400 text-xs mt-0.5">Lekki, Lagos</div>
                     </div>
                 </div>
-                <!-- T2 -->
-                <div class="testi-card p-7 rounded-2xl shadow-sm reveal">
+    
+                <!-- Card 2 -->
+                <div
+                    class="reveal relative bg-green-50 border border-green-100 rounded-2xl p-6 flex flex-col justify-between">
+                    <span
+                        class="absolute top-4 right-5 text-5xl font-display text-green-200 leading-none select-none">"</span>
                     <div class="flex gap-0.5 mb-4">
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-5 italic">"I ordered day-old chicks three times now. Every
-                        single time they arrived healthy, alert and well-packaged. These people know what they're doing.
-                        Highly recommended!"</p>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-display text-amber-800 font-bold">
-                            E</div>
-                        <div>
-                            <div class="font-semibold text-green-900 text-sm">Emmanuel Taiwo</div>
-                            <div class="text-gray-400 text-xs">Small-Scale Farmer, Ogun State</div>
-                        </div>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-5">
+                        "As a restaurant owner, consistency is key. Chidinma Eggcellent has been my trusted supplier for
+                        over a year. Always fresh, always on time."
+                    </p>
+                    <div class="text-center border-t border-green-100 pt-4">
+                        <div class="font-bold text-green-900 text-sm">Chef Emeka</div>
+                        <div class="text-gray-400 text-xs mt-0.5">Victoria Island, Lagos</div>
                     </div>
                 </div>
-                <!-- T3 -->
-                <div class="testi-card p-7 rounded-2xl shadow-sm reveal">
+    
+                <!-- Card 3 -->
+                <div
+                    class="reveal relative bg-green-50 border border-green-100 rounded-2xl p-6 flex flex-col justify-between">
+                    <span
+                        class="absolute top-4 right-5 text-5xl font-display text-green-200 leading-none select-none">"</span>
                     <div class="flex gap-0.5 mb-4">
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
-                        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
                         </svg>
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-5 italic">"The egg crates I receive weekly from GreenCrest
-                        are consistently fresh. My family noticed the difference in taste immediately. It's become part of
-                        our weekly routine."</p>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-display text-blue-800 font-bold">
-                            F</div>
-                        <div>
-                            <div class="font-semibold text-green-900 text-sm">Fatimah Suleiman</div>
-                            <div class="text-gray-400 text-xs">Homeowner, Abuja</div>
-                        </div>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-5">
+                        "The eggs from Chidinma Eggcellent are premium quality. I buy in bulk every week for my bakery. Very
+                        affordable and reliable."
+                    </p>
+                    <div class="text-center border-t border-green-100 pt-4">
+                        <div class="font-bold text-green-900 text-sm">Alhaja Fatima</div>
+                        <div class="text-gray-400 text-xs mt-0.5">Ikorodu, Lagos</div>
                     </div>
                 </div>
+    
+                <!-- Card 4 -->
+                <div
+                    class="reveal relative bg-green-50 border border-green-100 rounded-2xl p-6 flex flex-col justify-between">
+                    <span
+                        class="absolute top-4 right-5 text-5xl font-display text-green-200 leading-none select-none">"</span>
+                    <div class="flex gap-0.5 mb-4">
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
+                        </svg>
+                        <!-- Half star -->
+                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <defs>
+                                <linearGradient id="half">
+                                    <stop offset="50%" stop-color="#f59e0b" />
+                                    <stop offset="50%" stop-color="#d1d5db" />
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#half)"
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.064 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.951-.69L9.049 2.927z" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-5">
+                        "I ordered live broilers for my event and they were delivered healthy and on schedule. Will
+                        definitely order again!"
+                    </p>
+                    <div class="text-center border-t border-green-100 pt-4">
+                        <div class="font-bold text-green-900 text-sm">Mr. Okonkwo</div>
+                        <div class="text-gray-400 text-xs mt-0.5">Surulere, Lagos</div>
+                    </div>
+                </div>
+    
             </div>
         </div>
     </section>
@@ -381,18 +688,17 @@
     <section id="faq" class="py-24" style="background:#f3f4f0;">
         <div class="max-w-3xl mx-auto px-4 md:px-8">
             <div class="text-center mb-14 reveal">
-                <span class="text-amber-600 font-semibold text-sm tracking-widest uppercase">Got Questions?</span>
-                <h2 class="font-display text-4xl md:text-5xl text-green-900 mt-2">Frequently Asked</h2>
+                <h2 class="font-display text-4xl md:text-5xl text-green-900 mt-2">Frequently Asked Questions</h2>
             </div>
             <div class="space-y-4">
                 <details class="bg-white rounded-2xl shadow-sm overflow-hidden reveal group">
                     <summary class="flex items-center justify-between px-6 py-5 font-semibold text-green-900">
-                        Do you deliver outside Lagos and Ogun State?
+                        Do you deliver outside Edo State?
                         <span
                             class="faq-icon w-7 h-7 rounded-full bg-green-100 flex items-center justify-center text-green-700 flex-shrink-0 ml-4 text-xl font-light">+</span>
                     </summary>
-                    <div class="faq-body px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">Yes! We
-                        currently deliver to Lagos, Ogun, Oyo, and Osun states. For orders to other states, please contact
+                    <div class="faq-body px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">No! We
+                        currently deliver within Edo State. For orders to other states, please contact
                         us via WhatsApp or call our delivery hotline to get a custom quote based on your location and order
                         size.</div>
                 </details>
@@ -420,6 +726,16 @@
                 </details>
                 <details class="bg-white rounded-2xl shadow-sm overflow-hidden reveal group">
                     <summary class="flex items-center justify-between px-6 py-5 font-semibold text-green-900">
+                        How do I place an order?
+                        <span
+                            class="faq-icon w-7 h-7 rounded-full bg-green-100 flex items-center justify-center text-green-700 flex-shrink-0 ml-4 text-xl font-light">+</span>
+                    </summary>
+                    <div class="faq-body px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">Browse our 
+                        products and add items to your cart, fill in your delivery details and preferred date, then choose WhatsApp
+                        or Card payment at checkout.</div>
+                </details>
+                <details class="bg-white rounded-2xl shadow-sm overflow-hidden reveal group">
+                    <summary class="flex items-center justify-between px-6 py-5 font-semibold text-green-900">
                         How do I place a large or recurring order?
                         <span
                             class="faq-icon w-7 h-7 rounded-full bg-green-100 flex items-center justify-center text-green-700 flex-shrink-0 ml-4 text-xl font-light">+</span>
@@ -428,6 +744,15 @@
                         standing orders (restaurants, hotels, caterers), simply reach out via our WhatsApp checkout or
                         contact form. We offer weekly and bi-weekly supply contracts with priority dispatch, dedicated
                         account management, and negotiated pricing.</div>
+                </details>
+                <details class="bg-white rounded-2xl shadow-sm overflow-hidden reveal group">
+                    <summary class="flex items-center justify-between px-6 py-5 font-semibold text-green-900">
+                        Can I visit the farm?
+                        <span
+                            class="faq-icon w-7 h-7 rounded-full bg-green-100 flex items-center justify-center text-green-700 flex-shrink-0 ml-4 text-xl font-light">+</span>
+                    </summary>
+                    <div class="faq-body px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">Yes, you can visit our farm by appointment. Please 
+                        contact us at +234 906 828 4090 to schedule a visit and learn more about our farming practices and facilities.</div>
                 </details>
             </div>
         </div>
@@ -454,8 +779,8 @@
                         </div>
                         <div>
                             <div class="font-semibold text-green-900 mb-1">Physical Address</div>
-                            <div class="text-gray-600 text-sm leading-relaxed">12 Agric Settlement Road, Imeko,<br />Delta
-                                State, Nigeria</div>
+                            <div class="text-gray-600 text-sm leading-relaxed">Obagie Road, Opposite Blossom P Restaurant, Obagie,<br />Benin City<br />
+                            No. 1 Farm Road, Obayantor 11 Community, Off Sapele Road<br /> Benin City</div>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
@@ -468,7 +793,7 @@
                         </div>
                         <div>
                             <div class="font-semibold text-green-900 mb-1">Phone / WhatsApp</div>
-                            <div class="text-gray-600 text-sm">+234 802 345 6789<br />+234 901 234 5678</div>
+                            <div class="text-gray-600 text-sm">+234 905 591 2991<br />+234 706 256 0022</div>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
@@ -481,7 +806,7 @@
                         </div>
                         <div>
                             <div class="font-semibold text-green-900 mb-1">Email</div>
-                            <div class="text-gray-600 text-sm">orders@chidinmaeggcellent.ng<br />support@chidinmaeggcellent.ng
+                            <div class="text-gray-600 text-sm">orders@chidinmaeggcellentpoultry.com<br />info@chidinmaeggcellentpoultry.com
                             </div>
                         </div>
                     </div>
@@ -558,7 +883,7 @@
                 <!-- Logo -->
                 <a href="#home" class="flex items-center gap-2 mb-4 group focus-visible:ring-2 focus-visible:ring-amber-400
                                         focus-visible:ring-offset-2 rounded-lg transition">
-                    <img src="./assets/images/logo.png" alt="Chidinma Eggcellent Poultry Farm Logo"
+                    <img src="./assets/images/logo1.png" alt="Chidinma Eggcellent Poultry Farm Logo"
                         class="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                     <span
                         class="font-display text-xl text-white leading-none group-hover:text-amber-300 transition-colors duration-300">
@@ -576,7 +901,7 @@
                 <div class="flex space-x-5 mt-6">
     
                     <!-- WhatsApp -->
-                    <a href="https://wa.me/2348023456789" target="_blank"
+                    <a href="https://wa.me/2347062560022" target="_blank"
                         class="text-gray-400 hover:text-green-400 transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#4ade80]">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor">
                             <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.8.73 5.53 2.12 7.94L1 31l7.28-1.91A15.5 15.5 0 0 0
@@ -673,8 +998,30 @@
             <p>Designed & coded with ❤️ by ByCodeIt</p>
         </div>
     </footer>
+
+
+    <!-- ==== Floating WhatsApp Button ==== -->
+    <a href="https://wa.me/2347062560022" target="_blank" class="group fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex 
+            items-center justify-center transition transform hover:scale-110 z-50 animate-pulse-slow" aria-label="Chat on WhatsApp">
     
+        <!-- WhatsApp Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+            <path
+                d="M12 .5C5.65.5.5 5.65.5 12c0 2.1.55 4.1 1.6 5.9L.5 23.5l5.8-1.5c1.7.9 3.6 1.4 5.7 1.4 6.35 0 11.5-5.15 11.5-11.5S18.35.5 12 
+                .5zm0 20.9c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.4.9.9-3.3-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.2 4.3-9.5 9.6-9.5s9.6 4.3 9.6 9.5-4.3 9.5-9.6 
+                9.5zm5.3-7.1c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.3-.6.1-.3-.2-1.2-.4-2.3-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 
+                0-.5.2-.6.2-.2.5-.6.7-.8.2-.3.3-.5.5-.8.2-.3.1-.5 0-.7-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 
+                2.7s1.2 3.1 1.4 3.3c.2.3 2.4 3.7 5.8 5.1.8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.4z" />
+        </svg>
     
+        <!-- Tooltip -->
+        <span
+            class="absolute right-16 whitespace-nowrap bg-gray-900 text-white text-sm px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Chat with us on WhatsApp
+        </span>
+    </a>
+    
+
     <!-- ===== CART DRAWER ===== -->
     <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-2xl z-50 flex flex-col">
         <!-- Header -->
@@ -713,6 +1060,7 @@
                 class="mt-5 bg-green-800 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">Browse
                 Products</button>
         </div>
+
         <!-- Footer -->
         <div id="cart-footer" class="border-t border-gray-100 px-5 py-4 bg-gray-50 hidden">
             <div class="flex items-center justify-between mb-3">
@@ -720,14 +1068,119 @@
                 <span id="cart-subtotal" class="font-display text-2xl text-green-900">₦0</span>
             </div>
             <p class="text-gray-400 text-xs mb-3">Delivery fees calculated at checkout.</p>
-            <button onclick="checkoutWhatsApp()"
-                class="wa-btn w-full text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2.5 text-sm">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                </svg>
-                Checkout via WhatsApp
+            <button onclick="openCheckout()"
+                class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-full flex items-center justify-center gap-2 text-sm transition-all duration-200">
+                Proceed to Checkout →
             </button>
+        </div>
+        
+        <!-- Checkout Panel -->
+        <div id="checkout-panel" class="hidden absolute inset-0 bg-white flex flex-col z-10">
+        
+            <!-- Header -->
+            <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+                <h2 class="font-display text-xl text-green-900">Checkout</h2>
+                <button onclick="closeCheckout()"
+                    class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 transition-colors">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        
+            <!-- Scrollable Body -->
+            <div class="flex-1 overflow-y-auto px-5 py-5 space-y-5">
+        
+                <!-- Order Summary -->
+                <div class="bg-green-50 border border-green-100 rounded-2xl p-4">
+                    <div id="checkout-items-summary" class="space-y-1.5 mb-3"></div>
+                    <div class="border-t border-green-100 pt-3 flex items-center justify-between">
+                        <span class="font-bold text-green-900 text-sm">Total</span>
+                        <span id="checkout-total" class="font-display text-xl font-bold text-green-900">₦0</span>
+                    </div>
+                </div>
+        
+                <!-- Full Name -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-800 mb-1.5">Full Name <span
+                            class="text-red-500">*</span></label>
+                    <input id="co-name" type="text" placeholder="Your full name"
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-sm transition-all duration-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none" />
+                </div>
+        
+                <!-- Phone -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-800 mb-1.5">Phone Number <span
+                            class="text-red-500">*</span></label>
+                    <input id="co-phone" type="tel" placeholder="+234 xxx xxx xxxx"
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-sm transition-all duration-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none" />
+                </div>
+        
+                <!-- Delivery Date -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-800 mb-1.5">Delivery Date <span
+                            class="text-red-500">*</span></label>
+                    <input id="co-date" type="date"
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-sm transition-all duration-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none" />
+                </div>
+        
+                <!-- Delivery Address -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-800 mb-1.5">Delivery Address <span
+                            class="text-red-500">*</span></label>
+                    <textarea id="co-address" rows="3" placeholder="Full delivery address"
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-sm resize-none transition-all duration-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none"></textarea>
+                </div>
+        
+                <!-- Payment Method -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-800 mb-3">Payment Method</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button id="pay-whatsapp" onclick="selectPayment('whatsapp')"
+                            class="payment-btn active-payment flex flex-col items-center justify-center gap-1.5 p-4 rounded-xl border-2 border-green-500 bg-green-50 transition-all duration-200">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            <span class="text-xs font-semibold text-green-700">WhatsApp</span>
+                        </button>
+                        <button id="pay-bank" onclick="selectPayment('bank')"
+                            class="payment-btn flex flex-col items-center justify-center gap-1.5 p-4 rounded-xl border-2 border-gray-200 bg-white transition-all duration-200">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                            </svg>
+                            <span class="text-xs font-semibold text-gray-500">Bank Transfer</span>
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- Bank details (shown when bank is selected) -->
+                <div id="bank-details" class="hidden bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+                    <div class="font-bold text-amber-800 mb-2">Bank Transfer Details</div>
+                    <div class="space-y-1 text-amber-700">
+                        <div>Bank: <span class="font-semibold">First Bank Nigeria</span></div>
+                        <div>Account Name: <span class="font-semibold">Chidinma EggcellentPF Ltd</span></div>
+                        <div>Account Number: <span class="font-semibold">1234567890</span></div>
+                    </div>
+                    <p class="text-amber-600 text-xs mt-2">Send payment receipt via WhatsApp after transfer.</p>
+                </div>
+        
+                <!-- Error message -->
+                <p id="co-error" class="hidden text-red-500 text-xs font-medium"></p>
+        
+                <!-- Submit Button -->
+                <button onclick="submitCheckout()"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-full flex items-center justify-center gap-2 text-sm transition-all duration-200 mb-4">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                    Send Order via WhatsApp
+                </button>
+        
+            </div>
         </div>
     </div>
 
