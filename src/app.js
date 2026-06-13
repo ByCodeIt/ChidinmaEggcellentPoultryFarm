@@ -13,6 +13,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 
+
+
+
+
+
 // ==== CAROUSEL
 function goToSlide(n) {
     const prev = document.getElementById(`slide-${currentSlide}`);
@@ -46,6 +51,11 @@ function initCarousel() {
     slideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
 }
 
+
+
+
+
+
 // ==== SCROLL REVEAL
 function triggerReveal() {
     const els = document.querySelectorAll('.reveal:not(.visible)');
@@ -54,6 +64,11 @@ function triggerReveal() {
     }, { threshold: 0.1 });
     els.forEach(el => io.observe(el));
 }
+
+
+
+
+
 
 // ==== INIT
 document.addEventListener('DOMContentLoaded', () => {
@@ -66,12 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', triggerReveal, { passive: true });
 });
 
+
+
+
+
+
 // ==== STATE
 let cart = [];
 let currentSlide = 0;
 let slideInterval;
 const TOTAL_SLIDES = 3;
-const WA_NUMBER = '2348023456789'; // Replace with real number
+const WA_NUMBER = '+2347062560022'; // Replace with real number
+
+
+
+
+
 
 // ==== PRODUCTS DATA
 const products = [
@@ -88,7 +113,7 @@ const products = [
     {
         id: 'layers',
         name: 'Old Layers',
-        note: 'Healthy farm-raised old layer chickens available for sale. Well-fed and affordably priced, they are suitable for consumption, processing, and other poultry needs. Available for both retail and wholesale purchase.',
+        note: 'Healthy farm-raised old layer chickens available for sale. Well-fed and affordably priced, they are suitable for consumption, processing, and other poultry needs. Available for wholesale purchase.',
         image: './assets/images/layers.png',
         emoji: '🐓',
         basePrice: 9000,
@@ -122,6 +147,12 @@ const cardState = {};
 products.forEach(p => {
     cardState[p.id] = { weight: 1, qty: 1 };
 });
+
+
+
+
+
+
 
 // ==== RENDER PRODUCTS
 function renderProducts() {
@@ -195,15 +226,19 @@ function updateCardTotal(id) {
 }
 
 
+
+
+
+
 // ==== GALLERY
 const galleryPhotos = [
     { src: './assets/gallery/photo1.jpeg', caption: 'Healthy hens at feeding time' },
     { src: './assets/gallery/photo2.jpg', caption: 'Layer hens in cages' },
     { src: './assets/gallery/photo3.jpg', caption: 'Poultry manure bags' },
-    { src: './assets/gallery/photo4.jpg', caption: 'Rich organic manure' },
+    { src: './assets/gallery/photo4.jpg', caption: 'Fresh broilers ready for delivery' },
     { src: './assets/gallery/photo5.jpg', caption: 'Fresh manure ready for sale' },
-    { src: './assets/gallery/photo6.jpg', caption: 'Bagged manure closeup' },
-    { src: './assets/gallery/photo7.jpg', caption: 'NAFDAC certified poultry feed' },
+    { src: './assets/gallery/photo6.jpg', caption: 'Our baby broilers' },
+    { src: './assets/gallery/photo7.jpg', caption: 'Feeding time for our little ones' },
     { src: './assets/gallery/photo8.jpg', caption: 'Multi-tier layer cage system' }, 
 ];
 
@@ -255,6 +290,10 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') lightboxNav(1);
     if (e.key === 'ArrowLeft') lightboxNav(-1);
 });
+
+
+
+
 
 
 // ==== CART LOGIC
@@ -373,11 +412,21 @@ function checkoutWhatsApp() {
     window.open(url, '_blank');
 }
 
+
+
+
+
+
 // ==== CHECKOUT PANEL
 let selectedPayment = 'whatsapp';
 
 function openCheckout() {
     if (cart.length === 0) return;
+
+
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('co-date').min = today;
 
     // Populate order summary
     const summaryEl = document.getElementById('checkout-items-summary');
@@ -452,7 +501,7 @@ function submitCheckout() {
 
     message += `\n━━━━━━━━━━━━━━\n`;
     message += `💰 *Total: ₦${subtotal.toLocaleString()}*\n`;
-    message += `💳 Payment: ${selectedPayment === 'whatsapp' ? 'Pay on Delivery / WhatsApp' : 'Bank Transfer'}\n\n`;
+    message += `💳 Payment: ${selectedPayment === 'whatsapp' ? 'WhatsApp' : 'Bank Transfer'}\n\n`;
     message += `Thank you for ordering from Chidinma Eggcellent! 🐔🥚`;
 
     const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
